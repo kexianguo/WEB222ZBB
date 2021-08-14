@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>contact-me</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="background">
+<div class="width">
+    <div class="background1 padding20">
+        <form action="https://httpbin.org/post"
+              method="post"
+              onsubmit="return validateFrom()"
+        >
+            <h2>Contact Me</h2>
+            <div>
+                <label for="name" class="lable-width"><span class="red">*</span>Name:</label>
+                <input type="text" required id="name" name="name">
+            </div>
+            <div>
+                <label for="email" class="lable-width"><span class="red">*</span>Email:</label>
+                <input type="email" required id="email" name="email">
+            </div>
+            <div>
+                <label for="address" class="lable-width"><span class="red">*</span>Address:</label>
+                <input type="text" required id="address" name="address">
+            </div>
+            <div>
+                <label for="city" class="lable-width"><span class="red">*</span>City:</label>
+                <input type="text" required id="city" name="city" list="citys">
+                <datalist id="citys">
+                    <option value="Ottawa">
+                    <option value="Fredericton">
+                    <option value="Halifax">
+                    <option value="CapeBreton">
+                    <option value="Toronto">
+                    <option value="Hamilton">
+                    <option value="Kitchener">
+                    <option value="St.Catharines">
+                    <option value="Windsor">
+                    <option value="Oshawa">
+                    <option value="Barrie">
+                    <option value="Kingston">
+                    <option value="Guelph">
+                    <option value="Sudbury">
+                    <option value="Regina">
+                    <option value="Calgary">
+                    <option value="Edmonton">
+                    <option value="Charlottetown">
+                    <option value="Kelowna">
+                    <option value="Abbotsford">
+                    <option value="Vancouver">
+                    <option value="Victoria">
+                    <option value="Saskatoon">
+                    <option value="Québec">
+                    <option value="Montréal">
+                    <option value="Sherbrooke">
+                    <option value="Trois-Rivières">
+                    <option value="Chicoutimi">
+                    <option value="Winnipeg">
+                    <option value="Saint-John's">
+                    <option value="Yellowknife">
+                    <option value="Whitehorse">
+                    <option value="Iqaluit">
+                </datalist>
+            </div>
+            <div>
+                <label for="postal" class="lable-width"><span class="red">*</span>Postal</label>
+                <input type="text" required id="postal" name="postal">
+            </div>
+            <div>
+                <label class="lable-width"><span class="red">*</span>other</label>
+                <input type="radio" name="commentSelect" value="1" onchange="changeValue()"> Question or Comment
+                <input type="radio" name="commentSelect" value="2" onchange="changeValue()"> Hiring
+                <div>
+                    <textarea required rows="5" cols="80" name="comment"></textarea>
+                </div>
+                <div id="hiringId" style="display: none;">
+                    <label class="lable-width"><span class="red">*</span>hiring rate:</label>
+                    <input type="number" required id="hiring" name="hiring">
+                </div>
+            </div>
+            <div>
+                <input type="submit" onsubmit="return validateFrom()">
+            </div>
+        </form>
+    </div>
+</div>
+<script src="js/validate.js"></script>
+</body>
+</html>
